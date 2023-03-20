@@ -5,18 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+    
+    console.log('hola')
+    function validatePassword (){
+      var password = document.getElementById("pass"), 
+    confirm_password = document.getElementById("confirm_password")
+      if(password.value != confirm_password.value) {
+        console.log("novale")
+        document.getElementById("confirm_password").value=""
+        alert("Las contraseñas debn ser iguales");
+      } else {
+        
+        console.log("iguales")
+      }
+    }
+    
+</script>
 </head>
 <body>
     <form action="ejemplo.php" method="get">
-        <div>Nombre Completo: <input type="text" name="name" size="40"></div><br>
-        <div>Nombre de usuario: <input type="text" name="user" size="40"></div><br>
-        <div>Correo electrónico: <input type="text" name="email" size="40"></div><br>
-        <div>Clave de ingreso: <input type="text" name="pass" size="40"></div><br>
-        <div>Confirmar clave: <input type="text" name="confirmpass" size="40"></div><br>
-        <div>Fecha de nacimiento: <input type="number" name="nacido" min="1900"></div><br>
-        <div>Direccion de despacho:<input type="text" name="direccion"> </div><br>
+        <div>Nombre Completo: <input required type="text" Id="name" size="40"></div><br>
+        <div>Nombre de usuario: <input required type="text" Id="user" size="40"></div><br>
+        <div>Correo electrónico: <input required type="email" Id="email" size="40"></div><br>
+        <div>Clave de ingreso: <input required type="password" Id="pass" size="40"></div><br>
+        <div>Confirmar clave: <input required type="password" Id="confirm_password" size="40" onchange="validatePassword()"></div><br>
+        <div>Fecha de nacimiento: <input required type="number" Id="nacido" min="1900" ></div><br>
+        <div>Direccion de despacho:<input required type="text" Id="direccion"> </div><br>
+        
         <div>
-          <input type="submit" value="Enviar">
+          <button type="submit" value="envia" >Enviar</button>
           <input type="reset" value="Borrar">
         </div>
       </form>
