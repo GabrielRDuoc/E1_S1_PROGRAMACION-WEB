@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript">
-    
-    console.log('hola')
-    function validatePassword (){
-      var password = document.getElementById("pass"), 
-    confirm_password = document.getElementById("confirm_password")
-      if(password.value != confirm_password.value) {
-        console.log("novale")
-        document.getElementById("confirm_password").value=""
-        alert("Las contraseñas debn ser iguales");
-      } else {
-        
-        console.log("iguales")
-      }
-    }
-    
-</script>
+    <script src="Funciones.js"></script>
 </head>
 <body>
     <form action="ejemplo.php" method="get">
         <div>Nombre Completo: <input required type="text" Id="name" size="40"></div><br>
         <div>Nombre de usuario: <input required type="text" Id="user" size="40"></div><br>
         <div>Correo electrónico: <input required type="email" Id="email" size="40"></div><br>
-        <div>Clave de ingreso: <input required type="password" Id="pass" size="40"></div><br>
-        <div>Confirmar clave: <input required type="password" Id="confirm_password" size="40" onchange="validatePassword()"></div><br>
-        <div>Fecha de nacimiento: <input required type="number" Id="nacido" min="1900" ></div><br>
+        <div>Clave de ingreso: <input required type="password" Id="pass"minlength="6" maxlength="18"></div><br>
+        <div>Confirmar clave: <input required type="password" Id="confirm_password" minlength="6" maxlength="18" onchange="validatePassword()"></div><br>
+        <div>Fecha de nacimiento: <input type="date" id="start" name="trip-start"
+            value="2018-07-22"
+            min="1923-12-31" max="2022-12-31"></div><br>
         <div>Direccion de despacho:<input required type="text" Id="direccion"> </div><br>
         
         <div>
