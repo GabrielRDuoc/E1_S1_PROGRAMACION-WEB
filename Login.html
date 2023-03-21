@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="Funciones.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="Funciones.js"></script>
 </head>
+
 <body>
-    <form action="index.html" method="get">
-        <div>Nombre Completo: <input required type="text" Id="name" size="40"></div><br>
-        <div>Nombre de usuario: <input required type="text" Id="user" size="40"></div><br>
-        <div>Correo electrónico: <input required type="email" Id="email" size="40"></div><br>
-        <div>Clave de ingreso: <input required type="password" Id="pass"minlength="6" maxlength="18"></div><br>
-        <div>Confirmar clave: <input required type="password" Id="confirm_password" minlength="6" maxlength="18" onchange="validatePassword()"></div><br>
-        <div>Fecha de nacimiento: <input type="date" id="start" name="trip-start"  min="1923-12-31" max="2023-12-31" onchange="calcularMayor(this.value)"></div><br>
-        <div>Direccion de despacho:<input required type="text" Id="direccion"> </div><br>
-        
-        <div>
-          <button type="submit" value="envia" >Enviar</button>
-          <input type="reset" value="Borrar">
+  <header class="container">
+    <div class="row"></div> <br>
+    </header>
+  <div class="container">
+    <form action="Exito.html" method="get">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div>
+            Nombre Completo: 
+            <input required type="text" id="name"  />
+          </div>
+          <br />
+          <div>
+            Nombre de usuario: 
+            <input required type="text" id="user"  />
+          </div>
+          <br />
+          <div>
+            Correo electrónico: 
+            <input required type="email" id="email"  />
+          </div>
+          <br />
         </div>
-      </form>
+        <br />
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div>
+          Clave de ingreso: 
+          <input required type="password" id="pass" minlength="6" maxlength="18"   />
+        </div>
+        <br />
+        <div>
+          Confirmar clave: 
+          <input required type="password" id="confirm_password" minlength="6" maxlength="18"
+            onchange="validatePassword()"  />
+        </div>
+        <br />
+        <div>
+          Fecha de nacimiento: 
+          <input type="date" id="start" name="trip-start" min="1923-12-31" max="2023-12-31"
+            onchange="calcularMayor(this.value)"  />
+        </div>
+        <br />
+        <div>Direccion de despacho: <input type="text" id="direccion"  /></div>
+      </div>
+      <div>
+      </div> <br></div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div><button type="submit" value="envia" onclick=" exito(login)">Enviar</button></div> <br />
+        <div><input type="reset" value="Limpiar" /></div></div>
+      </div>
+      
+    </form>
+  </div>
 </body>
+
 </html>
